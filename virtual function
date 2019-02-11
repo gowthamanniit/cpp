@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+class father
+{
+	public:
+       virtual void display()
+	{
+	 cout<<"\n this is father class ";
+	}
+};
+class son:public father
+{
+	public:
+	void display()
+	{
+	 cout<<"\nthis is son class ";
+	}
+};
+void main()
+{
+ clrscr();
+ father *f;
+ son s;
+ f=&s;
+
+ f->display();
+ //s.display();
+ getch();
+}
