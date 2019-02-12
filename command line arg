@@ -1,0 +1,32 @@
+cmd1.cpp
+========
+#include<iostream.h>
+#include<conio.h>
+void main(int argc,char *argv[])
+{
+  cout<<" no. of arg : "<<argc;
+  for(int i=0;i<argc;i++)
+  {
+    cout<<"\n  value :"<<argv[1];
+  }
+}
+
+stepes :
+
+  1 ) save:
+  2) compile and run
+  3) file -->dos shell
+  4) type:
+  
+    >cmd1.exe 34 55 66 77
+    
+    output:
+      no. of arg:5
+      value: 0 : cmd1.exe
+      value1   : 34
+       value 2 : 55
+       value 3 : 66
+       value 4 : 77
+       
+  
+  
