@@ -1,0 +1,82 @@
+
+http://www.cppforschool.com/assignment/filetext_1.html
+
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+#include<string.h>
+//#include<istream.h>
+//#include<stdio.h>
+void main()
+{
+		char data[100];
+
+		clrscr();
+
+			ifstream if1;
+			if1.open("123.txt",ios::in);
+		    //		if1.seekg(0,ios::cur);
+				if1.seekg(ios::cur,ios::end);
+		    //		cout<<"   "<<if1.tellg();
+				long len=if1.tellg();
+				if1.seekg(0);
+		     //		if1>>data;
+
+		      if1.getline(data,len);
+			cout<<data;
+			if1.close();
+
+	//   ofstream of1;
+	 //  of1.open("123.txt",ios::app);
+
+	//  cout<<"enter text:";
+	  // cin>>data;
+	  //gets(data);
+	 /*   cin.getline(data,100);
+
+	of1<<data;
+	of1.close();*/
+
+	getch();
+}
+
+// read by char
+User-defined function in C++ to read the content from a text file OUT.TXT, count and display the number of alphabets present in it
+
+ 
+
+void alphabets()
+{
+	ifstream fin;
+	fin.open("out.txt");
+	char ch;
+	int count=0;
+	while(!fin.eof())
+	{
+		fin.get(ch);
+		if(isalpha(ch))
+			count++;
+	}
+	cout<<"Number of alphabets in file are "<<count;
+	fin.close();
+}
+//== no of words
+
+User defined function in C++ to count number of words in a text file named "OUT.TXT"
+
+ 
+
+void countwords()
+{
+	ifstream fin;
+	fin.open("out.txt");
+	char word[30];
+	int count=0;
+	while(!fin.eof())
+	{
+		fin>>word;
+		count++;
+	}
+	cout<<"Number of words in file are "<<count;
+	fin.close();
+}
